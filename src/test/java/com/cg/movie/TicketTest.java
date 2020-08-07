@@ -1,6 +1,8 @@
 package com.cg.movie;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import org.junit.jupiter.api.Test;
@@ -26,6 +28,13 @@ class TicketTest {
 		Ticket ticket = new Ticket(new Long(1), new Long(10), "First", true, "S1");
 		when(ticketRepo.save(ticket)).thenReturn(ticket);
 		assertEquals(ticket, ticketService.bookTicket(ticket));
+	}
+	
+	@Test
+	public void cancelTicketTest() {
+		Ticket ticket = new Ticket(new Long(1), new Long(10), "First", true, "S1");
+		ticketService.cancelTicket(ticket);
+		verify(ticketRepo,times(1)).delete(ticket);
 	}
 
 }

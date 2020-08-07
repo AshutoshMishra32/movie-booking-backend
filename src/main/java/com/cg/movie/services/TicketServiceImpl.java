@@ -16,6 +16,14 @@ public class TicketServiceImpl implements ITicketService {
 	public Ticket bookTicket(Ticket ticket) {
 		return ticketRepo.save(ticket);
 	}
+
+	@Override
+	public void cancelTicket(Ticket ticket) {
+		ticketRepo.delete(ticket);
+	}
+
+	
+	
 	
 	
 
