@@ -4,4 +4,6 @@ public interface IAdminService {
 	
 	public boolean checkLogin(String adminEmail,String adminPassword);
 
+	public Long countOfCustomers();
+
 }
