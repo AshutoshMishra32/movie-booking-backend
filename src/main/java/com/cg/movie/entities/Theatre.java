@@ -22,7 +22,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public class Theatre {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long theatreId;
 	private String theatreName;
 	private Integer theatreRating;

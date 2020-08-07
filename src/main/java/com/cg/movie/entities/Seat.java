@@ -13,7 +13,7 @@ import javax.persistence.Table;
 public class Seat {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long seatId;
 	private String seatStatus;
 	private Double seatPrice;

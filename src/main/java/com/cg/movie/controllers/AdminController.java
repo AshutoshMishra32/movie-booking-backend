@@ -25,4 +25,18 @@ public class AdminController {
 		return new ResponseEntity<Long>(adminService.countOfCustomers(), HttpStatus.OK);
 	}
 
+	// get count of customers
+
+	@GetMapping("/countOfTheatres")
+	public ResponseEntity<Long> countOfTheatres() {
+		return new ResponseEntity<Long>(adminService.countOfTheatres(), HttpStatus.OK);
+	}
+
+	// get count of customers
+
+	@GetMapping("/countOfMovies")
+	public ResponseEntity<Long> countOfMovies() {
+		return new ResponseEntity<Long>(adminService.countOfMovies(), HttpStatus.OK);
+	}
+
 }
